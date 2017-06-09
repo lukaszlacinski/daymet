@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<xs:schema targetNamespace="https://ewn.globus.org/schema/daymet-3" xmlns:xs="http://www.w3.org/2001/XMLSchema" xml:lang="EN">
+  <xs:element name="content">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="tileid" type="xs:integer"/>
+        <xs:element name="start_year" type="xs:integer"/>
+        <xs:element name="source" type="xs:string"/>
+        <xs:element name="Version_software" type="xs:string"/>
+        <xs:element name="Version_data" type="xs:string"/>
+        <xs:element name="Conventions" type="xs:string"/>
+        <xs:element name="citation" type="xs:string"/>
+        <xs:element name="references" type="xs:string"/>
+        <xs:element name="lambert_conformal_conic">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="grid_mapping_name" type="xs:string" fixed="lambert_conformal_conic"/>
+              <xs:element name="longitude_of_central_meridian" type="xs:decimal" fixed="-100.0"/>
+              <xs:element name="latitude_of_projection_origin" type="xs:decimal" fixed="42.5"/>
+              <xs:element name="false_easting" type="xs:decimal" fixed="0.0"/>
+              <xs:element name="false_northing" type="xs:decimal" fixed="0.0"/>
+              <xs:element name="standard_parallel">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="lat_1" type="xs:decimal" fixed="25.0"/>
+                    <xs:element name="lat_2" type="xs:decimal" fixed="60.0"/>
+                  <xs:sequence>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="x">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="long_name" type="xs:string" fixed="x coordinate of projection"/>
+              <xs:element name="standard_name" type="xs:string" fixed="projection_x_coordinate"/>
+              <xs:element name="units" type="xs:string" fixed="m"/>
+              <xs:element name="min" type="xs:decimal"/>
+              <xs:element name="max" type="xs:decimal"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="y">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="long_name" type="xs:string" fixed="y coordinate of projection"/>
+              <xs:element name="standard_name" type="xs:string" fixed="projection_y_coordinate"/>
+              <xs:element name="units" type="xs:string" fixed="m"/>
+              <xs:element name="min" type="xs:decimal"/>
+              <xs:element name="max" type="xs:decimal"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="time">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="long_name" type="xs:string" fixed="time"/>
+              <xs:element name="calendar" type="xs:string" fixed="standard"/>
+              <xs:element name="units" type="xs:integer" fixed="days since 1980-01-01 00:00:00 UTC"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="lat">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="long_name" type="xs:string" fixed="latitude_coordinate"/>
+              <xs:element name="standard_name" type="xs:string" fixed="latitude"/>
+              <xs:element name="units" type="xs:string" fixed="degrees_north"/>
+              <xs:element name="min" type="xs:decimal"/>
+              <xs:element name="max" type="xs:decimal"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="lon">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="long_name" type="xs:string" fixed="longitude_coordinate"/>
+              <xs:element name="standard_name" type="xs:string" fixed="longitude"/>
+              <xs:element name="units" type="xs:string" fixed="degrees_east"/>
+              <xs:element name="min" type="xs:decimal"/>
+              <xs:element name="max" type="xs:decimal"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dayl">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="long_name" type="xs:string" fixed="day length"/>
+              <xs:element name="units" type="xs:string" fixed="s"/>
+              <xs:element name="coordinates" type="xs:string" fixed="lat lon"/>
+              <xs:element name="grid_mapping" type="xs:string" fixed="lambert_conformal_conic"/>
+              <xs:element name="cell_methods" type="xs:string" fixed="area: mean time: mean"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="prcp">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="long_name" type="xs:string" fixed="precipitation"/>
+              <xs:element name="units" type="xs:string" fixed="mm/day"/>
+              <xs:element name="coordinates" type="xs:string" fixed="lat lon"/>
+              <xs:element name="grid_mapping" type="xs:string" fixed="lambert_conformal_conic"/>
+              <xs:element name="cell_methods" type="xs:string" fixed="area: mean time: sum"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="srad">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="long_name" type="xs:string" fixed="daylight average incident shortwave radiation"/>
+              <xs:element name="units" type="xs:string" fixed="W/m2"/>
+              <xs:element name="coordinates" type="xs:string" fixed="lat lon"/>
+              <xs:element name="grid_mapping" type="xs:string" fixed="lambert_conformal_conic"/>
+              <xs:element name="cell_methods" type="xs:string" fixed="area: mean time: mean"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="swe">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="long_name" type="xs:string" fixed="snow water equivalent"/>
+              <xs:element name="units" type="xs:string" fixed="kg/m2"/>
+              <xs:element name="coordinates" type="xs:string" fixed="lat lon"/>
+              <xs:element name="grid_mapping" type="xs:string" fixed="lambert_conformal_conic"/>
+              <xs:element name="cell_methods" type="xs:string" fixed="area: mean time: mean"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tmax">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="long_name" type="xs:string" fixed="daily maximum temperature"/>
+              <xs:element name="units" type="xs:string" fixed="degrees C"/>
+              <xs:element name="coordinates" type="xs:string" fixed="lat lon"/>
+              <xs:element name="grid_mapping" type="xs:string" fixed="lambert_conformal_conic"/>
+              <xs:element name="cell_methods" type="xs:string" fixed="area: mean time: maximum"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tmin">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="long_name" type="xs:string" fixed="daily minimum temperature"/>
+              <xs:element name="units" type="xs:string" fixed="degrees C"/>
+              <xs:element name="coordinates" type="xs:string" fixed="lat lon"/>
+              <xs:element name="grid_mapping" type="xs:string" fixed="lambert_conformal_conic"/>
+              <xs:element name="cell_methods" type="xs:string" fixed="area: mean time: minimum"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vp">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="long_name" type="xs:string" fixed="daily average vapor pressure"/>
+              <xs:element name="units" type="xs:string" fixed="Pa"/>
+              <xs:element name="coordinates" type="xs:string" fixed="lat lon"/>
+              <xs:element name="grid_mapping" type="xs:string" fixed="lambert_conformal_conic"/>
+              <xs:element name="cell_methods" type="xs:string" fixed="area: mean time: mean"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+

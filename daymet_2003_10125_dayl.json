@@ -4,15 +4,16 @@
   "ingest_type": "GMetaEntry", 
   "ingest_data": {
     "@version": "2016-11-09", 
-    "subject": "90cc375a-495c-11e7-bd6b-22000b9a448b/datasets/daymet/1328/tiles/2003/10125_2003/dayl.nc",
     "visible_to": [
       "public"
     ], 
+    "subject": "globus:90cc375a-495c-11e7-bd6b-22000b9a448b/datasets/daymet/1328/tiles/2003/10125_2003/dayl.nc",
     "content": {
       "@context": {
-        "datacite": "http://schema.datacite.org/meta/kernel-4/metadata.xsd",
+        "datacite": "http://schema.datacite.org/meta/kernel-4/metadata.xsd", 
         "daymet": "http://ewn.testing.nick.globuscs.info/meta/daymet-3.xsd"
       }, 
+      "datacite:title": "Daymet", 
       "datacite:publisher": "Oak Ridge National Laboratory Distributed Active Archive Center (ORNL DAAC)", 
       "datacite:contributors": [
         {
@@ -47,20 +48,20 @@
         }
       ], 
       "datacite:identifier": "daymet/2003/10125_2003/dayl.nc", 
-      "datacite:publicationYear": "2016",
+      "datacite:publicationYear": "2016"
       "datacite:dates": [
         {
           "datacite:date": "2016-07-14"
         }
       ], 
-      "datasite:formats": [
+      "datacite:formats": [
         {
           "datacite:format": "netCDF"
         }
       ], 
       "datacite:sizes": [
         {
-          "datacite:size": "215292"
+          "datacite:size": "15292"
         }
       ], 
       "datacite:descriptions": [
@@ -68,6 +69,33 @@
           "datacite:description": "Archived and distributed through the ORNL DAAC, the Daymet data set provides gridded estimates of daily weather parameters for North America, including daily continuous surfaces of minimum and maximum temperature, precipitation occurrence and amount, humidity, shortwave radiation, snow water equivalent, and day length. The daily time step, 1 km x 1 km spatial resolution, and North American spatial extent of the data set makes it a unique and valuable contribution to scientific, research, and educational communities. The literature shows that Daymet data have been broadly applied to fields including hydrology, terrestrial vegetation growth models, carbon cycle science, and regional to large scale climate change analysis. Daymet data are available for 1980 through the latest full calendar year and includes the United States, Mexico, Canada, Hawaii, and Puerto Rico. Daymet is supported by funding from NASA through the Earth Science Data and Information System (ESDIS) and the Terrestrial Ecosystem Program. The continued development of the Daymet algorithm and processing is also supported by the Office of Biological and Environmental Research within the U.S. Department of Energy's Office of Science. This data set contains the 2-degree by 2-degree tiles of Daymet version 3."
         }
       ], 
+      "daymet:tileid": "10125", 
+      "daymet:start_year": "2003", 
+      "daymet:source": "Daymet Software Version 3.0", 
+      "daymet:Version_software": "Daymet Software Version 3.0", 
+      "daymet:Version_data": "Daymet Data Version 3.0", 
+      "daymet:Conventions": "CF-1.6", 
+      "daymet:citation": "Please see http://daymet.ornl.gov/ for current Daymet data citation information", 
+      "daymet:references": "Please see http://daymet.ornl.gov/ for current information on Daymet references", 
+      "daymet:x_min": "899750.0", 
+      "daymet:x_max": "900750.0", 
+      "daymet:y_min": "-2158000.0", 
+      "daymet:y_max": "-2158000.0", 
+      "daymet:lat_min": "22.1148799062", 
+      "daymet:lat_max": "22.1157953611", 
+      "daymet:lon_min": "-91.4001125627", 
+      "daymet:lon_max": "-91.3906221758", 
+      "daymet:lambert_conformal_conic": {
+        "daymet:standard_parallel": {
+          "daymet:lat_1": "25.0", 
+          "daymet:lat_2": "60.0"
+        }, 
+        "daymet:false_easting": "0.0", 
+        "daymet:longitude_of_central_meridian": "-100.0", 
+        "daymet:latitude_of_projection_origin": "42.5", 
+        "daymet:false_northing": "0.0", 
+        "daymet:grid_mapping_name": "lambert_conformal_conic"
+      }, 
       "daymet:x": {
         "daymet:min": "899750.0", 
         "daymet:standard_name": "projection_x_coordinate", 
@@ -82,36 +110,13 @@
         "daymet:max": "-2158000.0", 
         "daymet:long_name": "y coordinate of projection"
       }, 
-      "daymet:start_year": "2003", 
-      "daymet:dayl": {
-        "daymet:cell_methods": "area: mean", 
-        "daymet:grid_mapping": "lambert_conformal_conic", 
-        "daymet:units": "s", 
-        "daymet:coordinates": "lat lon", 
-        "daymet:long_name": "daylength"
+      "daymet:time": {
+        "daymet:min": "8401.5", 
+        "daymet:units": "days since 1980-01-01 00:00:00 UTC", 
+        "daymet:calendar": "standard", 
+        "daymet:max": "8765.5", 
+        "daymet:long_name": "time"
       }, 
-      "daymet:references": "Please see http://daymet.ornl.gov/ for current information on Daymet references", 
-      "daymet:Version_data": "Daymet Data Version 3.0", 
-      "daymet:lon": {
-        "daymet:min": "-91.4001125627", 
-        "daymet:standard_name": "longitude", 
-        "daymet:units": "degrees_east", 
-        "daymet:max": "-91.3906221758", 
-        "daymet:long_name": "longitude coordinate"
-      }, 
-      "daymet:lambert_conformal_conic": {
-        "daymet:standard_parallel": {
-          "daymet:lat_1": "25.0", 
-          "daymet:lat_2": "60.0"
-        }, 
-        "daymet:false_easting": "0.0", 
-        "daymet:longitude_of_central_meridian": "-100.0", 
-        "daymet:latitude_of_projection_origin": "42.5", 
-        "daymet:false_northing": "0.0", 
-        "daymet:grid_mapping_name": "lambert_conformal_conic"
-      }, 
-      "daymet:Conventions": "CF-1.6", 
-      "daymet:Version_software": "Daymet Software Version 3.0", 
       "daymet:lat": {
         "daymet:min": "22.1148799062", 
         "daymet:standard_name": "latitude", 
@@ -119,17 +124,20 @@
         "daymet:max": "22.1157953611", 
         "daymet:long_name": "latitude coordinate"
       }, 
-      "daymet:citation": "Please see http://daymet.ornl.gov/ for current Daymet data citation information", 
-      "daymet:source": "Daymet Software Version 3.0", 
-      "daymet:tileid": "10125", 
-      "daymet:time": {
-        "daymet:min": "8401.5", 
-        "daymet:units": "days since 1980-01-01 00:00:00 UTC", 
-        "daymet:calendar": "standard", 
-        "daymet:max": "8765.5", 
-        "daymet:long_name": "time"
+      "daymet:lon": {
+        "daymet:min": "-91.4001125627", 
+        "daymet:standard_name": "longitude", 
+        "daymet:units": "degrees_east", 
+        "daymet:max": "-91.3906221758", 
+        "daymet:long_name": "longitude coordinate"
+      }, 
+      "daymet:dayl": {
+        "daymet:cell_methods": "area: mean", 
+        "daymet:grid_mapping": "lambert_conformal_conic", 
+        "daymet:units": "s", 
+        "daymet:coordinates": "lat lon", 
+        "daymet:long_name": "daylength"
       }
     }
   }
 }
-
